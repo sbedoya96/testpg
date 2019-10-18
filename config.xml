@@ -34,8 +34,8 @@ Desarrollo personalizado Jquery
   <preference name="prerendered-icon" value="true" />
   <content src="index.html"/>
   <platform name="android">
-    <icon src="hdpi.png" qualifier="hdpi"/>
-    <icon src="xdpi.png" qualifier="xdpi"/>
+    <!-- <icon src="hdpi.png" qualifier="hdpi"/>
+    <icon src="xdpi.png" qualifier="xdpi"/> -->
     <allow-intent href="market:*" />
   </platform>
   <preference name="SplashScreenDelay" value="5000" />
