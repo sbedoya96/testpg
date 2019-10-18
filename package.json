@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sbedoya96/testpg/issues"
   },
-  "homepage": "https://github.com/sbedoya96/testpg#readme"
+  "homepage": "https://github.com/sbedoya96/testpg#readme",
+  "dependencies": {
+    "react": "^16.10.2"
+  }
 }
