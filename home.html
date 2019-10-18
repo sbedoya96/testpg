@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login V3</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fonts/iconic/css/material-design-iconic-font.min.css"
+    />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css" />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/css-hamburgers/hamburgers.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/animsition/css/animsition.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/select2/select2.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="vendor/daterangepicker/daterangepicker.css"
+    />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!--===============================================================================================-->
+  </head>
+  <body>
+    <nav class="menuppal">
+      <ul>
+        <li><a href="../../../home.html">Home</a></li>
+        <li><a href="../../../mix.html">Mezcla</a></li>
+        <li><a href="../../../resultados.html">Resultados</a></li>
+        <li><a href="../../../index.html">Logout</a></li>
+      </ul>
+    </nav>
+    <div class="limiter">
+      <div
+        class="container-login100"
+        style="background-image: url('images/bg-01.jpg');"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-8 text-center">
+              <div
+                class="jumbotron"
+                data-aos-duration="3000"
+                data-aos="fade-down"
+              >
+                <h4>
+                  Realizacion de una mezcla sintética con distintas grabaciones
+                  binaurales que simulen un espacio sonoro de una vía de
+                  Medellín y presentacion de niveles de presión sonora.
+                </h4>
+                <button
+                  class="login100-form-btn gomix"
+                  style="    width: 45%;
+                margin: 5% auto;"
+                >
+                  Mezcla
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .hamburger {
+        position: fixed;
+        background-color: transparent;
+        left: 0;
+        top: 0;
+        height: 30px;
+        width: 30px;
+        padding: 20px 20px;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transition: -webkit-transform 0.25s
+          cubic-bezier(0.05, 1.04, 0.72, 0.98);
+        transition: transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+        z-index: 1002;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .hamburger.is-active {
+        background-color: none;
+      }
+      ._layer {
+        background: #333333;
+        margin-bottom: 4px;
+        border-radius: 2px;
+        width: 28px;
+        height: 4px;
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+        transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+      }
+      .hamburger:hover .-top {
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        transform: translateY(-100%);
+      }
+      .hamburger:hover .-bottom {
+        -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
+        transform: translateY(100%);
+      }
+      .hamburger.is-active .-top {
+        -webkit-transform: translateY(200%) rotate(45deg) !important;
+        -ms-transform: translateY(200%) rotate(45deg) !important;
+        transform: translateY(200%) rotate(45deg) !important;
+      }
+      .hamburger.is-active .-mid {
+        opacity: 0;
+      }
+      .hamburger.is-active .-bottom {
+        -webkit-transform: translateY(-200%) rotate(135deg) !important;
+        -ms-transform: translateY(-200%) rotate(135deg) !important;
+        transform: translateY(-200%) rotate(135deg) !important;
+      }
+
+      .menuppal.is_active {
+        transform: translate3d(0px, 0px, 0px);
+      }
+      .menuppal {
+        background-color: rgba(255, 255, 255, 0.95);
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        overflow-y: scroll;
+        position: fixed;
+        top: 0;
+        transform: translate3d(0px, -100%, 0px);
+        transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+        width: 100%;
+        z-index: 1001;
+      }
+      .menuppal ul {
+        margin: 0;
+        padding: 0;
+      }
+      .menuppal ul li {
+        list-style: none;
+        text-align: center;
+        font-family: Verdadna, Arial, Helvetica;
+        color: $nav-color-text;
+        font-size: 1.5rem;
+        line-height: 3em;
+        height: 3em;
+        color: #369;
+        text-transform: none;
+        font-weight: bold;
+      }
+      .menuppal ul li a {
+        text-decoration: none;
+        color: #369;
+      }
+      .menuppal ul li a:hover {
+        text-decoration: none;
+        color: #333;
+      }
+    </style>
+    <script>
+      // selector
+      var menu = document.querySelector(".hamburger");
+
+      // method
+      function toggleMenu(event) {
+        this.classList.toggle("is-active");
+        document.querySelector(".menuppal").classList.toggle("is_active");
+        event.preventDefault();
+      }
+
+      // event
+      menu.addEventListener("click", toggleMenu, false);
+
+      //Solución con jQUery
+      /*$(document).ready(function(){
+    $('.hamburger').click(function() {
+      $('.hamburger').toggleClass('is-active');
+      $('.menuresponsive').toggleClass('is-active');
+      return false;
+    });
+  });*/
+    </script>
+  </body>
+</html>
